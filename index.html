@@ -14,6 +14,13 @@
         🌱 Carbon Karma
        
       </h1>
+
+      <div class="d-flex justify-content-end gap-2 mb-3">
+        <button class="btn btn-outline-primary" onclick="shareProgress()">📤 Share</button>
+        <button class="btn btn-outline-info" onclick="showInfo()">ℹ️ Info</button>
+      </div>
+
+      
       
       <!-- Eco Badges -->
 <div class="mb-4 position-relative">
@@ -83,10 +90,21 @@
 
   <footer class="text-center text-muted py-4">
     <hr />
-    <p>🌱 <strong>Carbon Karma</strong> by Vaibhav Rawat | Empowering a greener tomorrow 🌍</p>
+    <p>🌱 <strong>Carbon Karma</strong> by <a href="https://github.com/VaibhavRawat27">Vaibhav Rawat</a> | Empowering a greener tomorrow 🌍</p>
   </footer>
   
 
+  <!-- Info Dialog -->
+<div id="infoDialog" class="alert alert-info d-none position-fixed top-50 start-50 translate-middle" style="z-index: 1000; width: 90%; max-width: 400px;">
+    <h5>About Carbon Karma</h5>
+    <p>🌱 Carbon Karma is a gamified platform where you track your sustainable actions, earn carbon credits, build eco-streaks, and unlock badges!</p>
+    <p>Make sustainability a habit while watching your positive impact grow!</p>
+    <button class="btn btn-sm btn-success mt-2" onclick="hideInfo()">Close</button>
+  </div>
+  
+  <!-- Certificate Section (for sharing) -->
+  <canvas id="certificateCanvas" width="800" height="600" style="display: none;"></canvas>
+  
   <script src="script.js"></script>
 </body>
 </html>
