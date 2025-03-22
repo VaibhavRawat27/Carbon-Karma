@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carbon Karma</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-success mb-4">
+        🌱 Carbon Karma
+       
+      </h1>
+      
+      <!-- Eco Badges -->
+<div class="mb-4 position-relative">
+    <h5>🏅 Your Eco Badges</h5>
+    <div id="badgeContainer" class="d-flex gap-3 flex-wrap">
+      <span class="badge-emoji faded" id="badge1"
+        onmouseover="showTooltip(this)"
+        onmouseout="hideTooltip()">🌞</span>
+      <span class="badge-emoji faded" id="badge2"
+        onmouseover="showTooltip(this)"
+        onmouseout="hideTooltip()">🌿</span>
+      <span class="badge-emoji faded" id="badge3"
+        onmouseover="showTooltip(this)"
+        onmouseout="hideTooltip()">🚴</span>
+      <span class="badge-emoji faded" id="badge4"
+        onmouseover="showTooltip(this)"
+        onmouseout="hideTooltip()">🏆</span>
+    </div>
+    <div id="tooltip" class="custom-tooltip"></div>
+  </div>
+  
+  
+
+    <!-- Credit Score -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4>Your Carbon Credits: <span id="creditScore" class="text-success">0</span></h4>
+        <p class="text-muted">Keep logging your eco-friendly actions and grow your score.</p>
+        <p><strong>🌟 Streak: <span id="ecoStreak">0</span> days</strong></p>
+        <p id="impactText" class="text-primary"></p>
+      </div>
+    </div>
+
+    <!-- Daily Challenge -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5>🎯 Daily Eco Challenge</h5>
+        <p id="dailyChallenge">Click below to get today’s challenge!</p>
+        <button onclick="spinChallenge()" class="btn btn-outline-success">🎲 Spin Challenge</button>
+      </div>
+    </div>
+
+    <!-- Log Action -->
+    <div class="mb-4">
+      <h5>Log an Eco Action</h5>
+      <div class="row g-2">
+        <div class="col-md-6 col-lg-4" id="actionButtons"></div>
+      </div>
+    </div>
+
+    <!-- Action History -->
+    <div class="mb-4">
+      <h5>Action History</h5>
+      <ul id="actionHistory" class="list-group mb-3"></ul>
+      <button onclick="downloadCSV()" class="btn btn-outline-success">Download as CSV</button>
+    </div>
+  </div>
+
+  <div class="card mb-4 p-3 mx-3">
+    <div class="card-body">
+      <h5>📰 Sustainability News</h5>
+      <ul id="newsFeed" class="list-group"></ul>
+      <small class="text-muted">Powered by web sources</small>
+    </div>
+  </div>
+  
+
+  <footer class="text-center text-muted py-4">
+    <hr />
+    <p>🌱 <strong>Carbon Karma</strong> by Vaibhav Rawat | Empowering a greener tomorrow 🌍</p>
+  </footer>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
